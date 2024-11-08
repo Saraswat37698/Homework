@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one{
+        background: rgba(0, 0, 0, 0.7);
+        height: 100vh;
+    }
+    .two{
+        height: 20%;
+        display: flex;
+    }
+    .image{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+    }
+    .but{
+        padding: 30px;
+        width:60%;
+        text-align: right;
+    }
+    #signin{
+        position: relative;
+        right: 2px;
+        background-color: red;
+        padding: 10px 14px;
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 80%;
+    }
+    p{
+        margin: 13px;
+        font-weight: 400;
+    }
+    #p2{
+        font-size: 23px;
+    }
+    #p1{
+        
+        font-size: 28px;
+    }
+    body {
+    margin: 0;
+    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/8f12b4f0-a894-4d5b-9c36-5ba391c63fbe/44355e66-dbf8-4dd8-ba6b-8e9e32ec6abd/IN-en-20230320-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
+#h{
+    font-size: 54px;
+    padding: 0px;
+}
+</style>
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png" width="150" height="50">
+            </div>
+            <div class="but">
+                <button id="signin">Sign In </button>
+                    
+                <button id="signin">Register</button>
+            </div>
+        </div>
+        <div class="main">
+            <h1 id="h">Unlimited movies, TV shows and more.</h1>
+            <p id="p1">Watch anywhere. Cancel anytime.</p>
+            <p id="p2">"Ready to Watch? Enter your email to creat or restart your membership</p>
+        </div>
+    </div>
+</body>
+</html>
