@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: space-between;
+        height: 350px;
+        width: 350px;
+        margin: 12%;
+        padding-left: 10px;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+        }
+    body{
+        background-color: black;
+    }
+    img{
+        
+        box-shadow: 0px 0px 8px grey;
+        border-radius: 5px;
+        transform-origin: center;
+        transform: perspective(800px) rotateY(20deg);
+        transition: 0.5s;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+    }
+     .container:hover img{
+        opacity:0.3;
+     }
+     .container img:hover{
+        transform: perspective(800px) rotate(0deg);
+        opacity:1;
+     }   
+
+</style>
+<body>
+    <div class="container" >
+        <img src="imagewatch1.png" alt="1">
+        <img src="imagewatch2.png" alt="2">
+        <img src="imagewatch3.png" alt="3">
+    </div>
+</body>
+</html>
