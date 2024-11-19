@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <title>Tailwind</title>
+  </head>
+  <body>
+    <div class="h-80 w-2/5 mt-40 ml-auto mr-auto shadow-2xl">
+      <div class="h-1/3 bg-black text-white">
+        <img
+          class="object-cover absolute h-56 w-52 mt-9 ml-6 shadow-xl shadow-teal-400"
+          src="https://tailwindcss.com/_next/static/media/retro-shoe.24e25785.jpg"
+          alt=""
+        />
+        <h1 class="font-bold text-2xl pt-6 pl-72">Retro Shoe</h1>
+        <span class="font-bold text-xl pt-6 pl-72">$89.90</span>
+        <span class="uppercase text-teal-400 pl-2">In Stock</span>
+      </div>
+      <div class="h-2/3 ml-64">
+        <ul class="flex mt-5">
+          <li
+            class="p-2 bg-black text-white border-2 border-black ml-5 shadow-xl shadow-teal-400"
+          >
+            XS
+          </li>
+          <li class="p-2 hover:bg-black hover:text-white border-black ml-5">
+            S
+          </li>
+          <li class="p-2 hover:bg-black hover:text-white border-black ml-5">
+            M
+          </li>
+          <li class="p-2 hover:bg-black hover:text-white border-black ml-5">
+            L
+          </li>
+          <li class="p-2 hover:bg-black hover:text-white border-black ml-5">
+            XL
+          </li>
+        </ul>
+        <div class="flex space-x-2 mb-4 text-sm font-medium">
+          <div class="flex space-x-4">
+            <button
+              class="mt-5 ml-5 px-6 h-12 uppercase font-semibold border-2 border-black bg-teal-400 text-black"
+              type="submit"
+            >
+              Buy now
+            </button>
+            <button
+              class="mt-5 px-6 h-12 uppercase font-semibold border border-slate-200 text-slate-900"
+              type="button"
+            >
+              Add to bag
+            </button>
+          </div>
+          <button
+            class="mt-5 flex-none flex items-center justify-center w-12 h-12 text-black"
+            type="button"
+            aria-label="Like"
+          >
+            <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="ml-5 text-xs leading-6 text-slate-500">
+          Free shipping on all continental US orders.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
