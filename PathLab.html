@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathlab Landing Page</title>
+</head>
+<style>
+    .prefooter
+    {
+        background-color: #fecc4e;
+        height: 400px;
+        width: 100%;
+        display:flex;
+        
+    }
+    .innerfotter1 ,.innerfotter2,.innerfotter3,.innerfotter4
+    {
+        border: none;
+        height: 80%;
+        width: 200px;
+        margin: 80px;
+        font-size: 14px;
+    }
+    footer
+    {
+        background-color: #0047af;
+        height: 110px;
+        width: 100%;
+    }
+    
+    /**/
+    .navbar1
+    {
+        display: flex;
+        text-align: center;
+        background-color:  #fecc4e;
+        height: 50px;
+        width: 100%;
+        z-index: 1;
+        
+    }
+    .container1 
+    {
+        font-size: 12px;
+        position: relative;
+        top: 18px;
+        left: 290px;
+        border :NONE;
+        width: 46%;
+        justify-content: space-between;
+        display: flex;
+    }
+    .container11
+    {
+        font-size: 12px;
+        position: relative;
+        top: 18px;
+        left: 340px;
+        border :NONE;
+        width: 20%;
+        justify-content: space-between;
+        display: flex;
+    }
+    .container2
+    {
+        font-size:12px;
+        width: 95%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        left: 60px;
+    }
+    .motion{
+        height: 300px;
+        background-color: #fecc4e;
+        width: 100%;
+        display:flex;
+        animation: slide 100s linear infinite;
+     }
+    /*animation*/
+    @keyframes slide{
+  0% { transform: translateX(0); }
+  
+ 
+  100% { transform: translateX(-220%); }
+}
+
+    .blueundermotion
+    {
+        height: 250px;
+        background-color: #0047af;
+        display:flex;
+        align-items: center;
+        width: 100%;
+       
+        
+    }
+    .blueinner1
+    {
+        border: none;
+        height: 60%;
+        width: 75%;
+        position: relative;
+        left: 140px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: 230px;
+       
+       
+    }
+    .logo1 ,.logo2,.logo3,.logo4,.logo5{
+        border-right: 0.3px solid yellow;
+        border-left: 0.3px solid yellow;
+        height:90%;
+        width: 180px;
+        img{
+            position: relative;
+            left: 45px;
+        }
+        h1{
+            font-size: 17px;
+            color: white;
+            position:relative;
+            left: 20px;
+            top: 10px;
+        }
+    }
+    .logo11,.logo22,.logo33,.logo44,.logo55{
+        height:90%;
+        width: 180px;
+        position: relative;
+        bottom: -45px;
+        left: 0px;
+        
+        margin: 0.5px;
+        img{
+            position:relative;
+            left: 50px;
+        }
+        
+     
+    }
+    /*Section 2*/
+    .bigcard1
+    {
+        height: 255px;
+        width: 85%;
+        border: none;
+        position:relative;
+        left: 140px;
+        bottom: 45px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 6px 1px;
+        z-index: 1;
+    }
+    .innerbigcard1
+    {
+        border: none;
+        height: 60%;
+        width:  95%;
+        display:flex;
+        position: relative;
+        bottom: 15px;
+        left : 70px;
+    }
+    .bigcard2
+    {
+        height: 380px;
+        width: 85%;
+        border: none;
+        position:relative;
+        bottom: 20px;
+        left: 140px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px 1px;
+       
+    }
+    .bigcard5{
+        height: 380px;
+        width: 85%;
+        border: none;
+        position:relative;
+        top: 40px;
+        left: 140px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px 1px;
+    }
+    .bigcard5y
+    {
+        height: 380px;
+        width: 85%;
+        border: none;
+        position:relative;
+        top: 90px;
+        left: 140px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px 1px;
+    }
+    .bigcard6{
+        height: 380px;
+        width: 85%;
+        border: none;
+        position:relative;
+        top: 70px;
+        left: 140px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 1px 5px 1px;
+    }
+    .innerbigcard2
+    {
+        height: 95%;
+        width :95%;
+        display: flex;
+    }
+    .innerbigcard21 ,.innerbigcard22 ,.innerbigcard23
+    {
+        position:relative;
+        left: 20px;
+        border: none;
+        height: 75%;
+        width:  60%;
+        margin: 5px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 0px;
+        h5 {
+            position:relative;
+            bottom: 30px;
+        }
+        hr{
+            position:relative;
+            bottom: 20px;
+        }
+        h4{
+            position:relative;
+            bottom: 9px;
+            left: 5px;
+        }
+    }
+    /*Section 3*/
+    .bigcard3
+    {
+        height: 300px;
+        width: 85%;
+        border: none;
+        position:relative;
+        left: 140px;
+        bottom: 20px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 6px 1px;
+        
+    }
+    .bigcard4{
+        height: 300px;
+        width: 85%;
+        border: none;
+        position:relative;
+        left: 140px;
+        top: 10px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 6px 1px;
+    }
+
+    .innerbigcard3,.innerbigcard4
+    {
+        height: 300px;
+        width: 70%;
+        border: none;
+        position:relative;
+        left: 200px;
+        border-radius: 15px;
+        background-color: white;
+    }
+    /*Section 8*/
+    .bigcard8
+    {
+        height: 300px;
+        width: 85%;
+        border: none;
+        position:relative;
+        left: 140px;
+        top: 90px;
+        border-radius: 15px;
+        background-color: white; 
+        box-shadow: 1px 1px 6px 1px;
+    }
+    /*Section 9*/
+    .bigcard9
+    {
+        height: 250px;
+        width: 85%;
+        border: none;
+        position:relative;
+        top: 100px;
+        left: 140px;
+        border-radius: 15px;
+        background-color: white; 
+        box-shadow: 1px 1px 6px 1px;
+    }
+
+    /*Universal*/
+    .back
+    {
+        width: 100%;
+        height: 3500px;
+        background-color: #f1f1f1;
+    }
+    .chatbox
+    {
+        position:sticky;
+        bottom: 5px;
+        left: 1280px;
+        height : 35px;
+        width: 90px;
+        background-color: #22b1ca;
+        color: white;
+        border-radius: 7px;
+        box-shadow: 10px 10px 10px;
+        
+    }
+    footer
+    {
+        display:flex;
+        
+    }
+    .writting
+    {
+        width: 67%;
+        color: white;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        font-size: 12px;
+    }
+    .footerlogo img
+    {
+        height: 90px;
+        position:relative;
+        left: 50px;
+        top: 10px;
+    }
+     a:hover{
+        text-decoration: underline;
+
+    }
+    .scroll{
+        height: 4600px;
+        width: 100%;
+        border: none;
+        overflow-x: hidden;
+        scroll-snap-stop: always ;
+    }
+</style>
+<body>
+    <div class="scroll">
+    <header>
+        <nav class="navbar1">
+            <div class="container1">
+                 <a href="#">PATIENTS</a>
+                 <a href="#" style="text-decoration: none; color: black;">DOCTORS</a>
+                 <a href="#" style="text-decoration: none; color: black;">BUSINESS PARTNERSHIP</a>
+                 <a href="#" style="text-decoration: none; color: black;">ABOUT US</a>
+                 <a href="#" style="text-decoration: none; color: black;">INVESTORS</a>
+                 <a href="#" style="text-decoration: none; color: black;">CONTACT US</a>
+
+            </div>
+            <div class="container11">
+                    <a href="#" style="text-decoration: none; color: black;">BLOGS | FAQS</a>
+                    <a href="#">Welcome Guest User</a>
+            </div>
+           
+        </nav>
+        <nav class="navbar2">
+            <div class="container2">
+               <img src="logo-header-2.webp">
+                 <a href="#" style="text-decoration: none; color: black;">Book a Test</a>
+                 <a href="#" style="text-decoration: none; color: black;">Nearest Center</a>
+                 <a href="#" style="text-decoration: none; color: black;">Download Report</a>
+                 <a href="#" style="text-decoration: none; color: black;">Special Programs</a>
+                 <a href="#" style="text-decoration: none; color: black;">Career</a>
+                 <input type="text" placeholder="Search Location" style="border-radius: 0;">
+                 <input type="text" placeholder="Search Test & Pakages" style="border-radius: 0;">
+                 <img src="https://uat-cdn.drlallab.com/2022-12/cart-plus.png">
+                 <img src="Logoaftercart.png" style="height: 72px; width: 170px;">
+            </div>
+        </nav>
+    </header>
+    <section name="first">
+          <div class="motion">
+              <img src="slider1.png" alt="" class="src">
+              <img src="slider2.png" alt="" class="src">
+              <img src="slider3.png" alt="" class="src">
+          </div>
+          <div class="blueundermotion">
+               <div class="blueinner1">
+                   <div class="logo1">
+                        <img src="logo1.png">
+                        <h1>Nearest Centre</h1>
+                   </div>
+                   <div class="logo2">
+                        <img src="logo2.png">
+                        <h1 style="position: relative;left:55px;">Book a Test</h1>
+                   </div>
+                   <div class="logo3">
+                         <img src="logo3.png" style="height: 90px;">
+                         <h1 style="position: relative; left: 45px;">Test Menu</h1>
+                   </div>
+                   <div class="logo4">
+                         <img src="logo4.png">
+                         <h1 style="position: relative; right: -20px;">Download Reports</h1>
+                   </div>
+                   <div class="logo5">
+                         <img src="logo5.png">
+                         <h1>Upload Prescription</h1>
+                   </div>
+               </div>
+          </div>
+    </section>
+
+    <div class="back">
+
+    <section name="secound">
+        <div class="bigcard1">
+            <h1 style="position: relative; top: 15px;left:10px;">Select Programs</h1>
+           <div class="innerbigcard1">
+               <div class="logo11">
+                <img src="https://uat-cdn.drlallab.com/2021-07/special-img2.png" >
+                <h3 style="position: relative; left:30px;">SwasthFit</h3>
+               </div>
+               <div class="logo22">
+                <img src="https://uat-cdn.drlallab.com/2021-07/special-img4.png">
+                <h3 style="position: relative;">Pregnancy Package</h3>
+               </div>
+               <div class="logo33">
+                <img src="https://uat-cdn.drlallab.com/2021-07/special-img1.png">
+                <h3 style="position: relative; left:30px;">Diabetic Care Program</h3>
+               </div>
+               <div class="logo44">
+                <img src="https://uat-cdn.drlallab.com/2022-02/oncopro-1_0.png">
+                <h3 style="position: relative; left:40px;">Oncopro</h3>
+               </div>
+               <div class="logo55">
+                <img src="https://uat-cdn.drlallab.com/2021-07/special-img5.png">
+                <h3 style="position: relative; left:50px;">Allergy</h3>
+               </div>
+           </div>
+        </div>
+        <div class="bigcard2">
+            <h1>Popular Tests / Packages</h1>
+            
+          <div class="innerbigcard2">
+            <div class="innerbigcard21">
+                <h4>GLUCOSE, FASTING(F)</h4>
+                <hr>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="infologo.png">&nbsp&nbspNo Special Preparation required</h5>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="chartlogo.png">&nbsp&nbspDaily</h5>
+                <h5 style="z-index: 1;">&nbsp&nbsp&nbsp&nbsp<img src="chartticklogo.png" style="height: 25px;">&nbsp&nbsp2 parameters covered</h5>
+                <img src="glucosefasting.png" style="height:60px; width: 330px; position:relative;bottom: 60px; ">
+            </div>
+            <div class="innerbigcard22">
+                <h4>ALLERGY SCREEN</h4>
+                <hr>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="infologo.png">&nbsp&nbspNo Special Preparation required</h5>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="chartlogo.png">&nbsp&nbspDaily</h5>
+                <h5 style="z-index: 1;">&nbsp&nbsp&nbsp&nbsp<img src="chartticklogo.png" style="height: 25px;">&nbsp&nbsp2 parameters covered</h5>
+                <img src="glucosefasting.png" style="height:60px; width: 330px; position:relative;bottom: 60px; ">
+            </div>
+            <div class="innerbigcard23">
+                <h4>HbA1c; GLYCOSYLATED HAEMOGLOBIN</h4>
+                <hr>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="infologo.png">&nbsp&nbspNo Special Preparation required</h5>
+                <h5>&nbsp&nbsp&nbsp&nbsp<img src="chartlogo.png">&nbsp&nbsp Sample Daily by 11 Am. Report on Same Day.</h5>
+                <h5 style="z-index: 1;">&nbsp&nbsp&nbsp&nbsp<img src="chartticklogo.png" style="height: 25px;">&nbsp&nbsp2 parameters covered</h5>
+                <img src="glucosefasting.png" style="height:60px; width: 330px; position:relative;bottom: 60px; ">
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section name="three">
+        <div class="bigcard3">
+            <h1 style="position:relative; top: 10px;left:10px;">Search test and packages</h1>
+            <button style="background-color: #fecc4e;color:black;width: 200px;border-radius: 20px;border-color: #fecc4e;height: 30px"><b>Lifestyle Disorder</b></button>
+            <button style="background-color: #6c6c6cd8;color:rgb(255, 255, 255);width: 200px;border-radius: 20px;border-color: #5c5b5a;height: 30px">Condition</button>
+            <button style="background-color: #6c6c6cd8;color:rgb(255, 255, 255);width: 200px;border-radius: 20px;border-color: #5c5b5a;height: 30px">Alphabet</button>
+            <div class="innerbigcard3">
+                <img src="SearchPackage.png" style="height:200px;width: 1150px; position:relative; right: 200px;">
+            </div>
+         </div>
+         <div class="bigcard4">
+             <div class="innerbigcard4">
+                  <img src="WhyDrlal.png" style="height: 272px; width: 1104px; position: relative; right: 190px; top: 10px;">
+             </div>
+         </div>
+         <div class="bigcard5">
+            <h1>Promotions & Discounts</h1>
+            
+          <div class="innerbigcard2">
+            <div class="innerbigcard21">
+                <img src="HappyPeople1.png" style="height: 240px;">
+            </div>
+            <div class="innerbigcard22">
+                <img src="HappyPeople2.png"style="height: 240px;">
+            </div>
+                 
+            <div class="innerbigcard23">
+                  <img src="HappyPeople3.png" style="height: 240px;">
+            </div>
+          </div>
+        </div>
+    </section>
+    <section name="five">
+    <div class="bigcard6">
+       <img src="Corporate.png">
+    </div>
+    <div class="bigcard6">
+        <img src="iphone.png">
+     </div>
+    </section>
+    <section name="six">
+        <div class="bigcard5y">
+            <h1>Promotions & Discounts</h1>
+            
+          <div class="innerbigcard2">
+            <div class="innerbigcard21">
+                <iframe width="347px" height="235px" src="https://www.youtube.com/embed/vtlsJelJ_3U?si=Nn92Zeh_cuw9msrn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="innerbigcard22">
+                <iframe width="347px" height="235px" src="https://www.youtube.com/embed/ZgDStg9bonI?si=JqTT-odcClcsgD5u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+                 
+            <div class="innerbigcard23">
+                <iframe width="347px" height="235px" src="https://www.youtube.com/embed/KvBWgjRUnnY?si=fgyRSZrDqHfabWz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+    </section>
+    
+    <section name="eight">
+        <div class="bigcard8">
+             <h1>Lab Test At Home</h1>
+             <p>Agartala|Agra|Ahmedabad|Aligarh|Allahabad|Alwar|Ambala|Amravati|Amritsar|Aurangabad|Azamgarh|Bahadurgarh|Bareilly|Begusarai|Bengaluru|Bhatinda|Bhilai|</p>
+             <p>Bhopal|Bhubaneshwar|Bijnor|Bilaspur|Chandigarh|Chennai|Coimbatore|Daltonganj|Darbhanga|Dehradun|Delhi|Deoria|Dhanbad|Durgapur|Faridabad|Faizabad|Gaya|</p>
+             <p>Ghaziabad|Goa Velha|Gorakhpur|Greater Noida|Gurgaon|Guwahati|Gwalior|Haldwani|Haridwar|Hisar|Hoshiarpur|Howrah|Hyderabad|Indore|Jabalpur|Jaipur|Jalandhar|</p>
+             <p>Jammu|Jamshedpur|Jodhpur|Kangra|Kanpur|Karnal|Khanna|Kochi|Kolkata|Kota|Kurukshetra|Lucknow|Ludhiana|Mangalore|Mathura|Meerut|Modinagar|Moga|</p>
+             <p>Mohali|Moradabad|Mumbai|Muzaffarpur|Mysore|Nagpur|Nashik|Noida|Panchkula|Panipat|Pathankot|Patiala|Patna|Pune|Purnia|Raipur|Ranchi|Rewari|Rohtak|</p>
+             <p>Sagar|Saharanpur|Shillong|Shimla|Silchar|Siliguri|Sirsa|Sonipat|Srinagar|Udaipur|Vadodara|Varanasi|Yamuna Nagar</p>
+        </div>
+    </section>
+
+    <section name="nine">
+        <div class="bigcard9">
+              <h1>Popular Tests</h1>
+              <p>Pregnancy Test|Full Body Checkups|Covid 19 Test|Heart Test|Kidney Test|Liver Test|CBC Test|Cholesterol Test|HbA1c Test|Hepatitis B Test|Kidney Function Test|</p>
+              <p>Liver Function Test|Sugar Test|Thyroid Test|Typhoid Test|Uric Acid Test|Vitamin B12 Test|Vitamin D Test|Allergy Test|Arthritis Test|Cancer Test|Bone And Joint|Dengue Test|</p>
+              <p>Diabetes Test|Rheumatoid Test|Tuberculosis Test|Infertility Test|Diabetes Care|Anemia Test|GastroIntestinal|Autoimmune Disorders|Fever Test</p>
+        </div>
+    </section>
+</div>
+
+<section class="prefooter">
+     <div class="innerfotter1">
+        <h4>PATIENTS</h4>
+        <p>Book a Test</p>
+        <p>Nearest Centre</p>
+        <p>Download Report</p>
+        <p>Download App</p>
+        <p>Promotions & Discounts</p>
+        <p>Special Programs</p>
+     </div>
+     <div class="innerfotter2">
+        <h4>DOCTORS</h4>
+        <p>Test Menu</p>
+        <p>Our Labs</p>
+        <p>Events</p>
+        <p>Quality</p>
+        <p>Resource Center</p>
+        <p>Our Departments</p>
+     </div>
+     <div class="innerfotter3">
+        <h4>BUSINESS PARTNERSHIP</h4>
+        <p>Partner With Us</p>
+        <p>Become a Vendor</p>
+        <p>Corporate Tie-Up</p>
+        <p>International Partner</p>
+        <p>Corporate Covid Testing</p>
+     </div>
+     <div class="innerfotter4">
+        <h4>ABOUT US</h4>
+        <p>Our Journey</p>
+        <p>Vision</p>
+        <p>Our Team</p>
+        <p>Our Network</p>
+        <p>Logistics Strength</p>
+        <p>CSR</p>
+     </div>
+     <div class="innerfotter4">
+        <h4>INVESTORS</h4>
+        <p>Financials</p>
+        <p>Investors Information</p>
+        <p>Corporate Governance</p>
+        <p>Smart ODR</p>
+        <p>SEBI Scores</p>
+        
+     </div>
+</section>
+
+<footer>
+    <div class="writting">
+        <p><b>2024© LalPathLabs.com. All rights reserved.  ---v1.4.11.1.24</b><br>
+
+            Blog | CSR | Terms of Use | Privacy Policy | Online Cancellation Policy | Cookie Policy | Sitemap
+            Only Pathology reports available online. For X-Ray, Ultrasound, ECG, TMT, Echo, PFT, Uroflowmetry reports, please visit the concerned center where</p>
+    </div>
+    <div class="footerlogo">
+        <img src="footerlogo.png">
+    </div>
+</footer>
+<div class="chatbox">
+    <h4>Lets Chat</h4>
+</div>
+</div>
+</body>
+</html>
