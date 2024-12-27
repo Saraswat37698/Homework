@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #myDiv {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">Hello, I'm a div!</div>
+
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        myDiv.style.backgroundColor = 'yellow';
+        myDiv.style.margin = '20px';
+        myDiv.style.padding = '10px';
+        myDiv.style.fontSize = '18px';
+        myDiv.style.fontWeight = 'bold';
+        myDiv.style.height = '200px';
+        myDiv.style.width = '300px';
+    </script>
+</body>
+</html>
