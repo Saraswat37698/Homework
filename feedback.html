@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback UI</title>
+    <style>
+        body, html {
+            font-family: monospace;
+            background-color: rgba(224, 255, 255, 1);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background-color: rgba(233, 255, 255, 1);
+            font-weight: 700;
+            font-size: 1.1rem;
+            width: 440px;
+            height: 300px;
+            border: none;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 3px 5.5px 15px 0px rgba(0, 0, 0, 0.462);
+        }
+        .inner1 {
+            width: 100%;
+            height: 100px;
+            color: green;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+        }
+        .inner2 {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .inner21 {
+            padding: 0;
+            font-size: 1.3rem;
+            width: 120px;
+            height: 100px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: ease-in-out 0.2s;
+        }
+        .inner21:hover {
+            background-color: #8fbc8f;
+            color: white;
+            box-shadow: 0px 0.2px 15px;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .inner3 {
+            margin-top: 10px;
+        }
+        #result {
+            display: none;
+        }
+        p{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="inner1">Feedback UI</div>
+        <div class="inner2" id="feedback-list">
+            <div class="inner21" onclick="selectFeedback(this)">
+                <img style="height: 40px;" src="https://cdn-icons-png.flaticon.com/512/166/166527.png" alt="Unhappy">
+                <p>Unhappy</p>
+            </div>
+            <div class="inner21" onclick="selectFeedback(this)">
+                <img style="height: 40px;" src="https://cdn-icons-png.flaticon.com/512/1791/1791385.png" alt="Neutral">
+                <p>Neutral</p>
+            </div>
+            <div class="inner21" onclick="selectFeedback(this)">
+                <img style="height: 40px;" src="https://cdn-icons-png.flaticon.com/512/166/166538.png" alt="Satisfied">
+                <p>Satisfied</p>
+            </div>
+        </div>
+        <div class="inner3">
+            <button id="send-feedback" onclick="sendFeedback()" disabled style="border-radius: 6px; height: 40px; width: 150px; color: white; background-color: rgba(0,139,139,1);">Send Review</button>
+            <div id="result">
+                <h2 style="color: green">Thank you for your feedback!</h2>
+                <p style="color: green" id="selected-feedback"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedFeedback = null;
+
+        function selectFeedback(element) {
+            const feedbackItems = document.querySelectorAll('.inner21');
+            feedbackItems.forEach(item => item.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedFeedback = element.querySelector('p').textContent;
+            document.getElementById('send-feedback').disabled = false;
+        }
+
+        function sendFeedback() {
+            if (!selectedFeedback) return;
+            document.getElementById('selected-feedback').textContent = `"${selectedFeedback}"`;
+            document.getElementById('feedback-list').style.display = 'none';
+            document.getElementById('send-feedback').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
