@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    body {
+      background-color: #001a4d;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .form {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    input, select, button {
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #004d99;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0073e6;
+    }
+
+    .card {
+      background-color: #004d99;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-info {
+      text-align: left;
+      font-size: 1.2em;
+    }
+
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .action-btn {
+      background-color: #e60000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background-color: #ff1a1a;
+    }
+
+    .adjust-btn {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .adjust-btn:hover {
+      background-color: #0099ff;
+    }
+    #leaderboard
+    {
+        border-radius: 100px 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span>🏆</span> Leaderboard <span>🏆</span></h1>
+    <div class="form">
+      <input type="text" id="firstName" placeholder="First Name" />
+      <input type="text" id="lastName" placeholder="Last Name" />
+      <select id="country">
+        <option value="" disabled selected>Select country</option>
+        <option value="USA">USA</option>
+        <option value="India">India</option>
+        <option value="UK">UK</option>
+        <option value="Canada">Canada</option>
+      </select>
+      <input type="number" id="score" placeholder="Score" />
+      <button id="addScore">Add Score</button>
+    </div>
+    <div id="leaderboard">
+      <!-- Cards will be dynamically added here -->
+    </div>
+  </div>
+  <script>
+    document.getElementById("addScore").addEventListener("click", function () {
+      const firstName = document.getElementById("firstName").value;
+      const lastName = document.getElementById("lastName").value;
+      const country = document.getElementById("country").value;
+      const score = parseInt(document.getElementById("score").value);
+
+      if (firstName && lastName && country && !isNaN(score)) {
+        const leaderboard = document.getElementById("leaderboard");
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <div class="card-info">
+            <div>${firstName} ${lastName}</div>
+            <div>${country}</div>
+            <div>${score}</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn delete-btn">🗑️</button>
+            <button class="adjust-btn minus-btn">-5</button>
+            <button class="adjust-btn plus-btn">+5</button>
+          </div>
+        `;
+
+        // Add event listeners for delete and score adjustment
+        card.querySelector(".delete-btn").addEventListener("click", function () {
+          leaderboard.removeChild(card);
+        });
+
+        card.querySelector(".minus-btn").addEventListener("click", function () {
+          const scoreDiv = card.querySelector(".card-info div:nth-child(3)");
+          let currentScore = parseInt(scoreDiv.textContent);
+          currentScore -= 5;
+          scoreDiv.textContent = currentScore;
+        });
+
+        card.querySelector(".plus-btn").addEventListener("click", function () {
+          const scoreDiv = card.querySelector(".card-info div:nth-child(3)");
+          let currentScore = parseInt(scoreDiv.textContent);
+          currentScore += 5;
+          scoreDiv.textContent = currentScore;
+        });
+
+        leaderboard.appendChild(card);
+
+        // Clear input fields after adding
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("country").value = "";
+        document.getElementById("score").value = "";
+      } 
+      else 
+      {
+        alert("Please fill in all fields.");
+      }
+    });
+  </script>
+</body>
+</html>
