@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dad Joke Generator</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(45deg, #f1e7ff, #ee9ca7,rgb(148, 203, 235));
+    }
+    .container {
+      text-align: center;
+      width: 1300px;
+      height: 170px;
+      background: rgba(255, 255, 255, 0);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    h1 {
+      color: green;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #333;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: green;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dad Joke Generator</h1>
+    <p id="message">An error happened, try again later</p>
+    <button onclick="fetchJoke()">TELL ME A JOKE</button>
+  </div>
+  <script>
+    async function fetchJoke() {
+      const message = document.getElementById("message");
+      try {
+        const response = await fetch("https://icanhazdadjoke.com/", { headers: { Accept: "application/json" } });
+        if (!response.ok) throw new Error("Failed to fetch joke");
+        const data = await response.json();
+        message.textContent = data.joke;
+      } catch (error) {
+        message.textContent = "An error happened, try again later";
+      }
+    }
+  </script>
+</body>
+</html>
